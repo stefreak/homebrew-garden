@@ -29,6 +29,7 @@ class GardenCli < Formula
     else
       # macos
       libexec.install "garden", "fsevents.node", "pty.node", "static"
+    end
     bin.install_symlink libexec/"garden"
   end
 
