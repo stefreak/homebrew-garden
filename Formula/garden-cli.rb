@@ -4,8 +4,6 @@ class GardenCli < Formula
 
   version "0.13.13"
 
-  depends_on "rsync"
-
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://download.garden.io/core/0.13.13/garden-0.13.13-linux-arm64.tar.gz"
