@@ -24,7 +24,11 @@ class GardenCli < Formula
   end 
 
   def install
-    libexec.install "garden", "fsevents.node", "static"
+    if OS.linux?
+      libexec.install "garden", "pty.node", "static"
+    else
+      # macos
+      libexec.install "garden", "fsevents.node", "pty.node", "static"
     bin.install_symlink libexec/"garden"
   end
 
